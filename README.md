@@ -431,6 +431,8 @@ type is constant, this array can be defined This can be done by the below declar
     void (*funcs[])()={fa, fb, fc, fd, fe, nullptr};
     //this defines functions fa... fe as pointers. 
 ```
+Also, it is possible to redefine an operator (like `+`) by using the `operator` keyword. 
+This is most applicable using classes. 
 ## Object Oriented 
 
 ## Advanced Standard Library
