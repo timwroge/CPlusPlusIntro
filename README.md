@@ -406,7 +406,7 @@ Some high level uses of functions involve passing addresses of objects in order 
 create a large copy on the runtime stack. This is done with the & operator. as in: 
 ```cpp
 void getPrintMe(const string & aString){
-    printf("%s", *aString);
+    printf("%s", aString.c_string());
   }
 ```
 Static variables are used when you want to have a value of something defined in a function remain
