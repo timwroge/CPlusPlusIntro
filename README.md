@@ -418,9 +418,19 @@ Function pointers are reassigning the function name to another reference. For in
 had a function named `func()` then you can create the function pointer with the assignment:
 ```cpp
 void (*functionPointer)() =func;
+// this is identical to 
+void (*functionPointer)() =&func;
 ```
-After this `functionPointer` can be used in the same way that `func` can be used. Be 
-sure to match the return type ( in this case `void`). 
+After this `functionPointer` can be used in the same way that `func` can be used 
+sometimes a dereference is done as well in order to show that the pointer is
+there and be more explicit. Be 
+sure to match the return type ( in this case `void`). The main time this is useful is
+when defining an array of function pointers. So long as the return 
+type is constant, this array can be defined This can be done by the below declaration:
+```cpp
+    void (*funcs[])()={fa, fb, fc, fd, fe, nullptr};
+    //this defines functions fa... fe as pointers. 
+```
 ## Object Oriented 
 
 ## Advanced Standard Library
