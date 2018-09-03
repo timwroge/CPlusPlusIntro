@@ -401,7 +401,7 @@ expression, expression
 ## Files and Pointers
 Pointers are defined using the * operator on assignment and dereferenced with the same * operator. 
 The & reference operator gets the address of an object. This is often used to define a pointer. 
-## Functions
+## Functions and Function Pointers
 Some high level uses of functions involve passing addresses of objects in order to not 
 create a large copy on the runtime stack. This is done with the & operator. as in: 
 ```cpp
@@ -413,6 +413,14 @@ Static variables are used when you want to have a value of something defined in 
 on memory. For instance, if you would like to return the reference to a string, the 
 value of the string cannot be passed as a reference if it is originally defined in memory. 
 In order to accomplish this, you need to pass the `static` keyword.
+
+Function pointers are reassigning the function name to another reference. For instance, if you 
+had a function named `func()` then you can create the function pointer with the assignment:
+```cpp
+void (*functionPointer)() =func;
+```
+After this `functionPointer` can be used in the same way that `func` can be used. Be 
+sure to match the return type ( in this case `void`). 
 ## Object Oriented 
 
 ## Advanced Standard Library
