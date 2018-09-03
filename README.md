@@ -470,6 +470,16 @@ int main( int argc, char ** argv ) {
 }
 
 ```
+Defining namespaces is as simple as defining the namespace around the things you would like included in
+the namespace. See some code below:
+```cpp
+    namespace anExampleNamespace{
+    // some class definitions 
+    class blahBlah{
+    //some more class stuff
+    }
+    }
+```
 ## Advanced Standard Library
 
 ## Data Structure Implementations
