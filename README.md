@@ -441,6 +441,35 @@ file. To do this, just include the function header and have the function definti
 Some simple things to note: class variables default to private while struct variables default to 
 public, a pointer to an object is dereferenced using the `->` operator, make sure to mark a function
 as `const` safe by adding the `const` keyword at the end of the function definition. 
+
+Below is an example of a class and its implementation in C++
+```cpp
+// class.cpp by Bill Weinman <http://bw.org/>
+#include <cstdio>
+using namespace std;
+
+// a very simple class
+class Class1 {
+
+    int i=0 ;
+public:
+    
+    void setvalue( const int value );
+    int getvalue() const;
+};
+void Class1::setvalue(const int value ){ i = value; }
+int Class1::getvalue() const
+{ return i; }
+int main( int argc, char ** argv ) {
+    int i = 47;
+    Class1 object1;
+    
+    object1.setvalue(i);
+    printf("value is %d\n", object1.getvalue());
+    return 0;
+}
+
+```
 ## Advanced Standard Library
 
 ## Data Structure Implementations
