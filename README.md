@@ -433,8 +433,14 @@ type is constant, this array can be defined This can be done by the below declar
 ```
 Also, it is possible to redefine an operator (like `+`) by using the `operator` keyword. 
 This is most applicable using classes. 
-## Object Oriented 
+## Classes
+Classes can be defined two different ways in C++. The first is a very readable way that is included directly in the
+file itself and the second is through defining it in a header file, the same can be completed inside the
+file. To do this, just include the function header and have the function defintions later. 
 
+Some simple things to note: class variables default to private while struct variables default to 
+public, a pointer to an object is dereferenced using the `->` operator, make sure to mark a function
+as `const` safe by adding the `const` keyword at the end of the function definition. 
 ## Advanced Standard Library
 
 ## Data Structure Implementations
