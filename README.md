@@ -487,6 +487,8 @@ the namespace. See some code below:
     std::vector<int> a= {5,6};
     a[3];
     ```
+    
+    To fix this, you can just pass `-fsanitize=address` to your favorite compiler. 
 
 ## Advanced Standard Library
 
