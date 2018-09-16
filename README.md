@@ -480,6 +480,15 @@ the namespace. See some code below:
     }
     }
 ```
+## Common C++ Bugs
+* Always check bounds of array before hard indexing! ( make it in a try catch block ) 
+** ex: 
+    
+    ```cpp
+    std::vector<int> a= {5,6};
+    a[3];
+    ```
+
 ## Advanced Standard Library
 
 ## Data Structure Implementations
