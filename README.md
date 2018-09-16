@@ -481,8 +481,7 @@ the namespace. See some code below:
     }
 ```
 ## Common C++ Bugs
-* Always check bounds of array before hard indexing! ( make it in a try catch block ) 
-** ex: 
+* Always check bounds of array before hard indexing! ( make it in a try catch block ) For example: 
     
     ```cpp
     std::vector<int> a= {5,6};
