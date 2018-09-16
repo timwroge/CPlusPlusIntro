@@ -490,7 +490,7 @@ the namespace. See some code below:
     
     To fix this, you can just pass `-fsanitize=address` to your favorite compiler. 
  * Maps can have really bad issues if you do not write the correct key (misspell "hey" with "hye"). If this happens, the map will return 0. Imagine you are looking for the timeout of a network.... network["timeout"]. This will cause infinite timeouts. 
-* Passing by reference can break if you send a nonstatic string reference. For instance, if you declare a string inside a function, and return it by reference, you will break everything because it will pass a reference to a object that has been destroyed. 
+* Passing by reference can break if you send a nonstatic string reference. For instance, if you declare a string inside a function, and return it by reference, you will break everything because it will pass a reference to a object that has been destroyed. To fix this, pass `-fsanitize-address-use-after-scope`
 ## Advanced Standard Library
 
 ## Data Structure Implementations
