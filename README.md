@@ -489,6 +489,7 @@ the namespace. See some code below:
     ```
     
     To fix this, you can just pass `-fsanitize=address` to your favorite compiler. 
+ * Maps can have really bad issues if you do not write the correct key (misspell "hey" with "hye"). If this happens, the map will return 0. Imagine you are looking for the timeout of a network.... network["timeout"]. This will cause infinite timeouts. 
 
 ## Advanced Standard Library
 
