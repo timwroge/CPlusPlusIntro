@@ -401,6 +401,23 @@ expression, expression
 ## Files and Pointers
 Pointers are defined using the * operator on assignment and dereferenced with the same * operator. 
 The & reference operator gets the address of an object. This is often used to define a pointer. 
+
+The traditional pointer is very easy to use, in that it can be created using the basic definition using the
+`*` operator. 
+
+More advanced pointers include the `unique_ptr`, `shared_ptr` and `weak_ptr`.
+
+The unique pointer is suppored depending on the compiler, and can be most often defined as:
+ ```cpp
+ std::unique_ptr<type> name(new type());
+ //to delete:
+ name.reset();
+  ```
+  The unique pointer cannot actually be passed directly to a function because its address is unique and connot
+  be copied. In order to be used, the unique pointer actually needs to be passed by reference. 
+
+In order to make copies of pointers, use shared_ptr, 
+
 ## Functions and Function Pointers
 Some high level uses of functions involve passing addresses of objects in order to not 
 create a large copy on the runtime stack. This is done with the & operator. as in: 
